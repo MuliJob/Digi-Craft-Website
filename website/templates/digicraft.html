@@ -1,16 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
+    <!-- Global Metadata -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://astro-nutritrack.chrstnl.com/">
+
+    <!-- Twitter -->
+    <meta name="twitte:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@your-handle">
+    <meta property="twitter:url" content="https://astro-nutritrack.chrstnl.com/">
+    <meta property="twitter:title" content="Digi Craft - Build your next app today🚀">
+    <meta property="twitter:description" content="We help you build your next app with our on a budget.">
+    <meta property="twitter:image" content="https:/www.astro-nutritrack.chrstnl.com/images/astro-nutritrack.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:url" content="https:/www.astro-nutritrack.chrstnl.com/">
+    <meta property="og:image" content="https:/www.astro-nutritrack.chrstnl.com/images/astro-nutritrack.png">
+    <meta property="og:site_name" content="https:/www.astro-nutritrack.chrstnl.com/">
+    <meta property="og:title" content="Digi Craft - Build your next app today🚀">
+    <meta property="og:description" content="We help you build your next app with our on a budget.">
+
+    <!-- Primary Meta Tags -->
+    <title>Digi Craft - Build your next app today🚀</title>
+    <meta name="title" content="Digi Craft - Build your next app today🚀">
+    <meta name="description" content="We help you build your next app with our on a budget.">
+    <meta name="generator" content="Astro v2.10.15">
+    <meta name="keywords" content="Personal portfolio, landing page, page template, developer portfoliom designer portfolio">
+    <meta name="author" content="chrstnl">
+    <link rel="sitemap" href="/sitemap-index.xml">
+
+    <!-- Theme Meta Tags -->
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="robots" content="index">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script type="module">let o=null;const s=e=>{o=e===o?null:e,a()},a=()=>{const e=document.getElementsByClassName("accordion-item--content");for(let t=0;t
+        <e.length;t++){const n=e[t];n.parentElement?.id===o?(n.classList.remove( "hidden"),n.classList.add( "!visibility",
+            "block")):(n.classList.remove( "!visibility", "block"),n.classList.add( "hidden"))}},i=document.querySelectorAll( ".accordion-item--heading button");i.forEach(e=>{e.addEventListener("click",()=>{const t=e.parentElement?.parentElement?.id;s(t)})});let c=!1;const d=document.querySelectorAll(".header-nav--container button"),l=document.querySelectorAll(".header-nav--menu .header-nav--menu-item .menu-item--link"),r=()=>{const
+            e=document.getElementById("navbar-default");c?(e?.classList.remove("show"),e?.classList.add("hide")):(e?.classList.remove("hide"),e?.classList.add("show")),c=!c},m=()=>{const e=document.getElementById("navbar-default");e?.classList.remove("show"),e?.classList.add("hide"),c=!1};d.forEach(e=>{e.addEventListener("click",()=>{r()})});l.forEach(e=>{e.addEventListener("click",()=>{m()})});
+    </script>
+    <script src="{% static 'js/script.js' %}"></script>
 </head>
+
 <body>
-    <h1>{{ title }}</h1>
-    <p>{{ message }}</p>
-    <p>Welcome to the root URL of my Django site!</p>
+    <main class="main relative overflow-hidden undefined">
+        <header id="header" class="header fixed left-0 w-full z-30 top-0 bg-white backdrop-filter backdrop-blur-md bg-opacity-50">
+            <section class="header--container wrap wrap-px">
+                <div class="">
+                    <h1 class="logo mb-0">
+                        <a href="/">
+                    <img alt="logo" class="w-auto" width="105" height="15" src="{% static 'images/myimage.jpg' %}" loading="lazy" decoding="async">
+                </a>
+                    </h1>
+                </div>
+                <section class="flex items-center ml-auto">
+                    <nav class="header-nav">
+                        <div class="header-nav--container">
+                            <button type="button" class="mobile-menu" aria-controls="navbar-dropdown" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg viewBox="0 0 24 24" class="h-6 w-auto text-black" astro-icon="mdi:menu"><path fill="currentColor" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+        </button>
+                            <div class="header-nav--menu-container z-20 hide" id="navbar-default">
+                                <ul class="header-nav--menu">
+                                    <li class="header-nav--menu-item">
+                                        <a href="/#features" class="menu-item--link flex items-center 
+                                    " target="_self">
+                                Features
+                                
+                            </a>
+                                    </li>
+                                    <li class="header-nav--menu-item">
+                                        <a href="/#faq" class="menu-item--link flex items-center 
+                                    " target="_self">
+                                FAQ
+                                
+                            </a>
+                                    </li>
+                                    <li class="header-nav--menu-item">
+                                        <a href="https://forms.office.com/r/2gF22zRXNu" class="menu-item--link flex items-center 
+                                    " target="_blank">
+                                Contact
+                                <span class="ml-2 inline-block text-sm font-medium text-inherit">
+                                        <svg viewBox="0 0 24 24" class="h-6 w-auto" astro-icon="mdi:arrow-top-right"><path fill="currentColor" d="M5 17.59 15.59 7H9V5h10v10h-2V8.41L6.41 19 5 17.59z"/></svg>
+                                    </span>
+                            </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <section class="undefined">
+                        <div class="btn-group--container hidden md:block ">
+
+                            <a role="button" href="#" class="btn btn--secondary ml-4">
+                    Get Started
+                    <svg viewBox="0 0 24 24" class="w-6" astro-icon="mdi:arrow-right"><path fill="currentColor" d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+                </a>
+
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </header>
+
+        <div class="main-wrapper bg-[#F3F5F8] relative z-10 pb-20 pt-20">
+            <section class="page-banner--container py-16">
+                <section class="page-banner--inner-container wrap wrap-px z-10">
+                    <section class="badge-group w-full">
+                        <div href="" class="badge-group--container  align--center undefined">
+
+                            <div class="badge-group--message">Discover Digi Craft!</div>
+                            <div class="badge-group--icon">
+                                <svg viewBox="0 0 24 24" class="w-4" astro-icon="mdi:hand-wave"><path fill="currentColor" d="M23 17c0 3.31-2.69 6-6 6v-1.5c2.5 0 4.5-2 4.5-4.5H23M1 7c0-3.31 2.69-6 6-6v1.5c-2.5 0-4.5 2-4.5 4.5H1m7-2.68-4.59 4.6c-3.22 3.22-3.22 8.45 0 11.67s8.45 3.22 11.67 0l7.07-7.09c.49-.47.49-1.26 0-1.75a1.25 1.25 0 0 0-1.77 0l-4.42 4.42-.71-.71 6.54-6.54c.49-.49.49-1.28 0-1.77s-1.29-.49-1.79 0L14.19 13l-.69-.73 6.87-6.89c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-6.89 6.89-.71-.7 5.5-5.48c.5-.49.5-1.28 0-1.77s-1.28-.49-1.77 0l-7.62 7.62a4.003 4.003 0 0 1-.33 5.28l-.71-.71a3 3 0 0 0 0-4.24l-.35-.35 4.07-4.07c.49-.49.49-1.28 0-1.77-.5-.48-1.29-.48-1.79.01z"/></svg>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section class="page-title--content max-w-3xl text-center mx-auto">
+                        <h1 class="h2 font-semibold text-4xl lg:text-6xl text-center mx-auto">
+                            The solution to Kenyan tech problems
+                        </h1>
+                    </section>
+                    <div class="content text-xl max-w-3xl text-black/60 text-center align--center">
+
+                        <p>
+                            Digi Craft is a Tech company that provides solutions to Kenyan tech problems. Check out our new app, Nganya, that helps <span class="text-secondary-700">(Passenger)</span> book a matatu or <span class="text-secondary-700">(tranport companies and matatu owners)</span>                            manage their ma3
+                        </p>
+
+                    </div>
+                    <div class="mt-6 mb-16 text-center">
+                        <section class="undefined">
+                            <div class="btn-group--container  align--center">
+
+                                <a href="#features" role="button" class="btn btn--primary">
+    Features
+    </a>
+                                <a role="button" href="https://nganyaapp.com" class="btn btn--secondary" target="_blank">
+                    Go to Nganya App
+                    <svg viewBox="0 0 24 24" class="w-6" astro-icon="mdi:arrow-right"><path fill="currentColor" d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+                </a>
+
+                            </div>
+                        </section>
+                    </div>
+
+                </section>
+            </section>
+            <!-- Home Banner -->
+            <section class="components--container wrap wrap-px grid gap-8 sm:gap-24">
+                <section id="features" class="features">
+                    <section class="badge-group w-full">
+                        <div href="" class="badge-group--container  align--center undefined">
+
+                            <div class="badge-group--message">Solution</div>
+                            <div class="badge-group--icon">
+                                <svg viewBox="0 0 24 24" class="w-4" astro-icon="mdi:star-circle-outline"><path fill="currentColor" d="m8.58 17.25.92-3.89-3-2.58 3.95-.37L12 6.8l1.55 3.65 3.95.33-3 2.58.92 3.89L12 15.19l-3.42 2.06M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8z"/></svg>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section class="page-title--content max-w-3xl text-center mx-auto">
+                        <h1 class="h2 font-semibold text-3xl lg:text-5xl text-center mx-auto">
+                            Lets Build Your Next App Today
+                        </h1>
+                    </section>
+                    <div class="content text-xl max-w-3xl text-black/60 text-center align--center">
+
+                        <p>
+                            We build high quality, affordable software that have been thought out and designed to solve common problem affecting Kenyan businesses.
+                            <br> We achive this by:
+                        </p>
+
+                    </div>
+                    <section class="process-items mt-16 space-y-16">
+                        <div id="1" class="process-item--container grid md:grid-cols-2 gap-y-8">
+                            <div class="process-item--image rounded-3xl ">
+                                <img alt="Process Banner 1" class="drop-shadow-xl w-full offset-y-0 offset-x-8 blur-16 object-cover" width="550" height="380" src="/_astro/cost_Z2WB3p.jpg" loading="lazy" decoding="async">
+                            </div>
+                            <div class="process-item--content md:pl-16 lg:pl-24 xl:pl-32  mr-auto my-auto content text-black/60">
+                                <h3 class="mb-6 h4 md:h3 font-semibold text-black">
+                                    Making it affordable
+                                </h3>
+                                <p>Cost is the biggest barrier to accessing quality software in Kenya. Thats why we have choose to build all our software as SaaS.</p>
+                                <ul class="process-item--list space-y-3">
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="1" class="process-item--container grid md:grid-cols-2 gap-y-8">
+                            <div class="process-item--image rounded-3xl md:order-1">
+                                <img alt="Process Banner 1" class="drop-shadow-xl w-full offset-y-0 offset-x-8 blur-16 object-cover" width="550" height="380" src="/_astro/user-design_Z2obbwu.jpg" loading="lazy" decoding="async">
+                            </div>
+                            <div class="process-item--content md:pr-16 lg:pr-24 xl:pr-32 ml-auto my-auto content text-black/60">
+                                <h3 class="mb-6 h4 md:h3 font-semibold text-black">
+                                    User Based Design
+                                </h3>
+                                <p>We believe that the best software is the one that is easy to use and solves the users problem with no complications. That is why we have invested in user based design to make our software easy to use.</p>
+                                <ul class="process-item--list space-y-3">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="feature-tabs">
+                    <section class="badge-group w-full">
+                        <div href="" class="badge-group--container  align--center undefined">
+
+                            <div class="badge-group--message">Our Products</div>
+                            <div class="badge-group--icon">
+                                <svg viewBox="0 0 36 36" class="w-4" astro-icon="twemoji:waving-hand"><path fill="#EF9645" d="M4.861 9.147c.94-.657 2.357-.531 3.201.166l-.968-1.407c-.779-1.111-.5-2.313.612-3.093 1.112-.777 4.263 1.312 4.263 1.312-.786-1.122-.639-2.544.483-3.331a2.483 2.483 0 0 1 3.456.611l10.42 14.72L25 31l-11.083-4.042L4.25 12.625a2.495 2.495 0 0 1 .611-3.478z"/><path fill="#FFDC5D" d="M2.695 17.336s-1.132-1.65.519-2.781c1.649-1.131 2.78.518 2.78.518l5.251 7.658c.181-.302.379-.6.6-.894L4.557 11.21s-1.131-1.649.519-2.78c1.649-1.131 2.78.518 2.78.518l6.855 9.997c.255-.208.516-.417.785-.622L7.549 6.732s-1.131-1.649.519-2.78c1.649-1.131 2.78.518 2.78.518l7.947 11.589c.292-.179.581-.334.871-.498L12.238 4.729s-1.131-1.649.518-2.78c1.649-1.131 2.78.518 2.78.518l7.854 11.454 1.194 1.742c-4.948 3.394-5.419 9.779-2.592 13.902.565.825 1.39.26 1.39.26-3.393-4.949-2.357-10.51 2.592-13.903L24.515 8.62s-.545-1.924 1.378-2.47c1.924-.545 2.47 1.379 2.47 1.379l1.685 5.004c.668 1.984 1.379 3.961 2.32 5.831 2.657 5.28 1.07 11.842-3.94 15.279-5.465 3.747-12.936 2.354-16.684-3.11L2.695 17.336z"/><g fill="#5DADEC"><path d="M12 32.042C8 32.042 3.958 28 3.958 24c0-.553-.405-1-.958-1s-1.042.447-1.042 1C1.958 30 6 34.042 12 34.042c.553 0 1-.489 1-1.042s-.447-.958-1-.958z"/><path d="M7 34c-3 0-5-2-5-5a1 1 0 1 0-2 0c0 4 3 7 7 7a1 1 0 1 0 0-2zM24 2a1 1 0 0 0 0 2c4 0 8 3.589 8 8a1 1 0 0 0 2 0c0-5.514-4-10-10-10z"/><path d="M29 .042c-.552 0-1 .406-1 .958s.448 1.042 1 1.042c3 0 4.958 2.225 4.958 4.958 0 .552.489 1 1.042 1s.958-.448.958-1C35.958 3.163 33 .042 29 .042z"/></g></svg>
+                            </div>
+
+                        </div>
+                    </section>
+                    <section class="page-title--content max-w-3xl text-center mx-auto">
+                        <h1 class="h2 font-semibold text-3xl lg:text-5xl text-center mx-auto">
+                            Nganya - Matatu Management Software
+                        </h1>
+                    </section>
+                    <div class="content text-xl max-w-3xl text-black/60 text-center align--center">
+
+                        <p>
+                            Nganya is a software solution that helps matatu owners, and transport companies manage their business with ease. It is a simple, easy to use and affordable solution that helps you manage your matatu business with ease.
+                        </p>
+                        <br>
+                        <p class="text-secondary-700">
+                            And now Passengers can now book and track their parcels
+                        </p>
+
+                    </div>
+                    <section class="undefined">
+                        <div class="card-group--container grid scroll-m-24 gap-8 grid-cols-1 max-w-4xl mx-auto mt-24 md:grid-cols-2">
+
+                            <div href="" target="_self" class="card text-black/60 block aspect-square relative transition-all duration-300 bg-neutral-50 -mt-1 mb-1 -ml-1 card-clip col-span-1 text-primary-900">
+
+                                <div class="card--body h-100 w-100 w-full bg-white-600/20 p-12">
+
+                                    <div class="card--image undefined">
+                                        <img alt="Customizable Layouts image used." class="object-cover undefined" width="672" height="452" src="/_astro/dashnord_FoJtv.webp" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="card--header flex flex-row w-auto items-center justify-between">
+                                        <h2 class="font-medium text-primary-900 mb-0 text-3xl leading-9 tracking-tighter !text-black !text-2xl !font-bold">
+
+                                            Intutive Dashboard
+
+                                        </h2>
+                                    </div>
+                                    <p>
+                                        Nganya comes with an intutive dashboard that gives you a quick overview of your business. You can see your revenue, expenses, and other key metrics at a glance. You can also customize the layout to suit your needs and preferences.
+                                    </p>
+
+                                </div>
+
+                            </div>
+                            <div href="" target="_self" class="card text-black/60 block aspect-square relative transition-all duration-300 bg-neutral-50 -mt-1 mb-1 -ml-1 card-clip col-span-1 text-primary-900">
+
+                                <div class="card--body h-100 w-100 w-full bg-white-600/20 p-12">
+
+                                    <div class="card--image undefined">
+                                        <img alt="Progress Tracking image used." class="object-cover undefined" width="672" height="452" src="/_astro/map_ZCjPle.webp" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="card--header flex flex-row w-auto items-center justify-between">
+                                        <h2 class="font-medium text-primary-900 mb-0 text-3xl leading-9 tracking-tighter !text-black !text-2xl !font-bold">
+
+                                            Fleet Tracking
+
+                                        </h2>
+                                    </div>
+                                    <p>
+                                        With Nganya, you can track your fleet in real time. You can see where your vehicles are at any given time, and get alerts if they go off route. This helps you keep your vehicles safe and secure, and ensures that they are always where they are supposed
+                                        to be.
+                                    </p>
+
+                                </div>
+
+                            </div>
+                            <div href="" target="_self" class="card text-black/60 block aspect-square relative transition-all duration-300 bg-neutral-50 -mt-1 mb-1 -ml-1 card-clip col-span-1 text-primary-900">
+
+                                <div class="card--body h-100 w-100 w-full bg-white-600/20 p-12">
+
+                                    <div class="card--image undefined">
+                                        <img alt="Progress Tracking image used." class="object-cover undefined" width="672" height="452" src="/_astro/queue_Z1A0eH6.webp" loading="lazy" decoding="async">
+                                    </div>
+                                    <div class="card--header flex flex-row w-auto items-center justify-between">
+                                        <h2 class="font-medium text-primary-900 mb-0 text-3xl leading-9 tracking-tighter !text-black !text-2xl !font-bold">
+
+                                            Fleet Queue Management
+
+                                        </h2>
+                                    </div>
+                                    <p>
+                                        Nganya comes with a fleet queue management feature that helps you manage your fleet more efficiently. You can see which vehicles are available, and assign them to routes based on their availability and capacity. This helps you optimize your fleet and
+                                        ensure that you are making the most of your resources.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </section>
+                </section>
+
+
+
+
+
+                <section id="faq" class="faq">
+                    <section class="badge-group w-full">
+                        <div href="" class="badge-group--container  align--center undefined">
+
+                            <div class="badge-group--message">FAQ</div>
+
+                        </div>
+                    </section>
+                    <section class="page-title--content max-w-3xl text-center mx-auto">
+                        <h1 class="h2 font-semibold text-3xl lg:text-5xl text-center mx-auto">
+                            Got some burning questions about Digi Craft?
+                            <br>
+                            <br> No worries! We&apos;ve got the answers you need:
+                        </h1>
+                    </section>
+                    <section class="accordion--container my-16 drop-shadow-xl max-w-3xl w-full mx-auto offset-y-0 offset-x-8">
+                        <div id="1" class="accordion-item--container border border-neutral-200 bg-white overflow-hidden rounded-t-lg">
+                            <h2 class="accordion-item--heading mb-0">
+                                <button class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition" type="button" aria-expanded="true">
+                        What is Digi Craft?
+                        <svg viewBox="0 0 24 24" class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none" astro-icon="mdi:chevron-up"><path fill="currentColor" d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>
+                    </button>
+                            </h2>
+                            <div class="accordion-item--content py-4 px-5 text-base hidden">
+                                <p>Digi Craft is a tech Company that provides a wide range of services, including web development and mobile app development. We are a team of passionate individuals who are dedicated to helping businesses grow and succeed in
+                                    the digital world.</p>
+                            </div>
+                        </div>
+                        <div id="2" class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0">
+                            <h2 class="accordion-item--heading mb-0">
+                                <button class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition" type="button">
+                        What is SAAS?
+                        <svg viewBox="0 0 24 24" class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none" astro-icon="mdi:chevron-up"><path fill="currentColor" d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>
+                    </button>
+                            </h2>
+                            <div class="accordion-item--content py-4 px-5 text-base hidden">
+                                <p>SAAS stands for Software as a Service. It is a software distribution model in which a third-party provider hosts applications and makes them available to customers over the internet.</p>
+                            </div>
+                        </div>
+                        <div id="3" class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0">
+                            <h2 class="accordion-item--heading mb-0">
+                                <button class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition" type="button">
+                        Why choose SAAS?
+                        <svg viewBox="0 0 24 24" class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none" astro-icon="mdi:chevron-up"><path fill="currentColor" d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>
+                    </button>
+                            </h2>
+                            <div class="accordion-item--content py-4 px-5 text-base hidden">
+                                <p>SAAS is a popular choice for many businesses because it offers several benefits, including cost savings, scalability, and flexibility. With SAAS, businesses can access software applications from anywhere, at any time, and
+                                    on any device.</p>
+                            </div>
+                        </div>
+                        <div id="4" class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0">
+                            <h2 class="accordion-item--heading mb-0">
+                                <button class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition" type="button">
+                        Why should I choose Digi Craft?
+                        <svg viewBox="0 0 24 24" class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none" astro-icon="mdi:chevron-up"><path fill="currentColor" d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>
+                    </button>
+                            </h2>
+                            <div class="accordion-item--content py-4 px-5 text-base hidden">
+                                <p>There are many reasons to choose Digi Craft for your software needs. We have a team of experienced professionals who are dedicated to providing high-quality services. We also offer competitive pricing and excellent customer
+                                    service.</p>
+                            </div>
+                        </div>
+                        <div id="5" class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border border-t-0 rounded-b-lg">
+                            <h2 class="accordion-item--heading mb-0">
+                                <button class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition" type="button">
+                        Do you offer custom software development?
+                        <svg viewBox="0 0 24 24" class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none" astro-icon="mdi:chevron-up"><path fill="currentColor" d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"/></svg>
+                    </button>
+                            </h2>
+                            <div class="accordion-item--content py-4 px-5 text-base hidden">
+                                <p>Yes, we offer custom software development services to meet the unique needs of our clients. Our team of developers can create custom software solutions that are tailored to your specific requirements. However all software
+                                    we develop will be based on our SAAS model.</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </div>
+
+
+        <footer id="footer" class="bg-white">
+
+            <section class="footer--container wrap wrap-px relative z-10">
+                <div class="footer--content-container py-16">
+                    <div class="footer-links mb-12 grid grid-cols-2 gap-8 md:mb-16 md:grid-cols-8 lg:grid-cols-12">
+                        <div class="col-span-6">
+                            <div class="footer--logo grid gap-8">
+                                <a href="/">
+                            <img alt="logo" class="h-6 w-auto" width="168" height="24" src="/_astro/tq-logo_Z1Lb5P0.webp" loading="lazy" decoding="async">
+                        </a>
+
+                                <section class="undefined">
+                                    <div class="btn-group--container  align--left">
+
+                                        <a role="button" href="https://nganyaapp.com/" class="btn btn--secondary">
+                                Nganya App
+                                <svg viewBox="0 0 24 24" class="w-6" astro-icon="mdi:arrow-right"><path fill="currentColor" d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+                            </a>
+
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-span-6">
+                            <div class="footer-menu grid grid-cols-2 md:grid-cols-8 lg:grid-cols-12">
+                                <div class="footer-menu--container col-span-1 md:col-span-4">
+                                    <h3 class="font-bold text-base mb-2">
+                                        Template
+                                    </h3>
+                                    <ul class="footer-menu--list">
+                                        <li class="footer-menu--list-item gap-2">
+                                            <a class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-secondary-700" href="#features">
+                                                    Features
+                                                </a>
+                                        </li>
+                                        <li class="footer-menu--list-item gap-2">
+                                            <a class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-secondary-700" href="#testimonials">
+                                                    Testimonials
+                                                </a>
+                                        </li>
+                                        <li class="footer-menu--list-item gap-2">
+                                            <a class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-secondary-700" href="#faq">
+                                                    FAQ
+                                                </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="footer-menu--container col-span-1 md:col-span-4">
+                                    <h3 class="font-bold text-base mb-2">
+                                        Company
+                                    </h3>
+                                    <ul class="footer-menu--list">
+                                        <li class="footer-menu--list-item gap-2">
+                                            <a class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-secondary-700" href="https://www.linkedin.com/company/taquana/" target="_blank">
+                                                    LinkedIn
+                                                </a>
+                                        </li>
+                                        <li class="footer-menu--list-item gap-2">
+                                            <a class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-secondary-700" href="#">
+                                                    Facebook
+                                                </a>
+                                        </li>
+                                        <li class="footer-menu--list-item gap-2">
+                                            <a class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-secondary-700" href="#">
+                                                    Instagram
+                                                </a>
+                                        </li>
+                                        <li class="footer-menu--list-item gap-2">
+                                            <a class="mb-2 block w-auto font-medium transition-colors duration-300 hover:text-secondary-700" href="#">
+                                                    X
+                                                </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="footer-credits relative z-10">
+                <div class="wrap wrap-px py-6">
+                    <p class="my-0">
+                        © 2024 Digi Craft. All rights reserved -
+                        <span class="font-normal">
+                    afiliate 
+                    <a class="transition-colors duration-300 hover:text-secondary-700" href="https://nganyaapp.com/" target="_blank">
+                        Nganya
+                    </a>
+                </span>
+                    </p>
+                </div>
+            </section>
+            <div class="footer--background"></div>
+        </footer>
+    </main>
     <script src="{% static 'js/script.js' %}"></script>
 </body>
+
 </html>
+<!-- Components Container -->
