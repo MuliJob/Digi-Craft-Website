@@ -2,6 +2,7 @@
 <html lang="en" class="scroll-smooth">
 
 <head>
+    {% load static %}
     <!-- Global Metadata -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -38,8 +39,8 @@
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="robots" content="index">
@@ -49,7 +50,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
-    {% load static %}
+    
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <script type="module">let o=null;const s=e=>{o=e===o?null:e,a()},a=()=>{const e=document.getElementsByClassName("accordion-item--content");for(let t=0;t
         <e.length;t++){const n=e[t];n.parentElement?.id===o?(n.classList.remove( "hidden"),n.classList.add( "!visibility",
