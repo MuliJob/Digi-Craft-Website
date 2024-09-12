@@ -286,7 +286,7 @@ audio,
 iframe,
 embed,
 object {
-    display: block;
+    display: inline-block;
     vertical-align: middle
 }
 
@@ -1202,7 +1202,7 @@ blockquote {
     text-align: center
 }
 
-.\ !text-2xl {
+.\ text-2xl {
     font-size: 1.5rem !important;
     line-height: 2rem !important
 }
@@ -1247,7 +1247,7 @@ blockquote {
     line-height: 1.75rem
 }
 
-.\ !font-bold {
+.\ font-bold {
     font-weight: 700 !important
 }
 
@@ -1275,7 +1275,7 @@ blockquote {
     letter-spacing: -.05em
 }
 
-.\ !text-black {
+.\ text-black {
     --tw-text-opacity: 1 !important;
     color: rgb(0 0 0 / var(--tw-text-opacity)) !important
 }

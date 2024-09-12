@@ -18,7 +18,7 @@ function m(e) {
 }
 
 function v(e, t) {
-  const r = t ? .timeout ? ? 50,
+  const r = t?.timeout ?? 50,
       a = Date.now();
   return setTimeout(function() {
       e({
@@ -69,7 +69,7 @@ async function h(e) {
   } = e;
   try {
       const r = await fetch(t).then(n => n.text());
-      s || = new DOMParser;
+      s = s || new DOMParser();
       const a = s.parseFromString(r, "text/html"),
           o = Array.from(a.querySelectorAll('link[rel="stylesheet"]'));
       await Promise.all(o.filter(n => !i.has(n.href)).map(n => (i.add(n.href), fetch(n.href))))
