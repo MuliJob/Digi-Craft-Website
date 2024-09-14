@@ -804,6 +804,17 @@ blockquote {
     border-width: 0
 }
 
+.social-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icon:hover {
+    transform: scale(1.1);
+}
+.linkedin:hover { color: #0077B5; }
+.facebook:hover { color: #1877F2; }
+.instagram:hover { color: #E4405F; }
+.x-twitter:hover { color: #000000; }
+
 .visible {
     visibility: visible
 }
