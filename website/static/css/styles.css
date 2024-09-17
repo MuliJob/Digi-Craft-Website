@@ -1418,6 +1418,42 @@ blockquote {
     box-shadow: 0 0 0 2px rgba(255, 153, 0, 0.774);
 }
 
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-column {
+    text-align: center;
+    width: 23%;
+}
+
+.avatar-icon {
+    font-size: 100px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact-column a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.contact-column p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .contact-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
 
 @media (max-width: 480px) {
     .newsletter-input {
