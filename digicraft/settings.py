@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -82,6 +82,8 @@ DATABASES = {
         'PASSWORD': 'Jobu61  ',
     }
 }
+
+DATABASES['default'] = dj_database_url.parse('postgresql://digicraft_user:QX6uUbnjWYPBfiW1x7yLvcHByzqQCuqv@dpg-crl8asggph6c73e1h6kg-a.oregon-postgres.render.com/digicraft')
 
 
 # Password validation
