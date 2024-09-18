@@ -1418,6 +1418,11 @@ blockquote {
     box-shadow: 0 0 0 2px rgba(255, 153, 0, 0.774);
 }
 
+.newsletter-form {
+gap: 10px; /* Adds space between input and button */
+}
+
+
 .contact-section {
     display: flex;
     justify-content: space-between;
@@ -1455,11 +1460,19 @@ blockquote {
 }
 
 
-@media (max-width: 480px) {
-    .newsletter-input {
-        width: 100%;
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .newsletter-form {
+      flex-direction: column;
+      gap: 10px;
+      display: flex;
+      width: 100%;
     }
-}
+
+    .newsletter-input {
+      width: 100%;
+    }
+  }
 
 @media (min-width: 640px) {
     .wrap {
