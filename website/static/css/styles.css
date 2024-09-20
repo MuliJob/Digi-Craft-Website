@@ -522,7 +522,7 @@ blockquote {
 }
 
 .btn--secondary:hover {
-    background-color: #fe9a03cc
+    background-color: #fe9a03fe
 }
 
 .btn--outline {
@@ -1420,22 +1420,19 @@ blockquote {
 
 .contact-section {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
-
 .contact-column {
     text-align: center;
-    width: 23%;
+    margin: 10px;
 }
-
-.avatar-icon {
-    font-size: 100px;
-    color: #333;
-    margin-bottom: 15px;
+.avatar-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
 }
-
 .contact-column a {
     display: block;
     color: #333;
@@ -1443,8 +1440,16 @@ blockquote {
     margin: 5px 0;
 }
 
+.contact-column a:hover {
+    color: #f59e0b; 
+}
+
 .contact-column p {
     margin: 5px 0;
+}
+
+.contact-column p:hover {
+    color: #f59e0b;
 }
 
 @media (max-width: 768px) {
