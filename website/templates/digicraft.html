@@ -96,7 +96,6 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
     <script src="{% static 'js/lemon.js' %}" defer></script>
-
     <script type="module">
       let o = null;
       const s = (e) => {
@@ -213,7 +212,15 @@
                         Features
                       </a>
                     </li>
-                    
+                    <li class="header-nav--menu-item">
+                      <a
+                        href="/#pricing"
+                        class="menu-item--link flex items-center"
+                        target="_self"
+                      >
+                        Pricing
+                      </a>
+                    </li>
                     <li class="header-nav--menu-item">
                       <a
                         href="/#services"
@@ -256,21 +263,7 @@
                         class="menu-item--link flex items-center"
                         target="_self"
                       >
-                        Contact
-                        <span
-                          class="ml-2 inline-block text-sm font-medium text-inherit"
-                        >
-                          <svg
-                            viewBox="0 0 24 24"
-                            class="h-6 w-auto"
-                            astro-icon="mdi:arrow-top-right"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M5 17.59 15.59 7H9V5h10v10h-2V8.41L6.41 19 5 17.59z"
-                            />
-                          </svg>
-                        </span>
+                        Contact Us
                       </a>
                     </li>
                   </ul>
@@ -683,191 +676,69 @@
             </section>
           </section>
 
-          <section id="faq" class="faq">
+          <section class="feature-tabs" id="pricing">
             <section class="badge-group w-full">
               <div
                 href=""
                 class="badge-group--container align--center undefined"
               >
-                <div class="badge-group--message">FAQ</div>
+              <div class="badge-group--message">Pricing</div>
+                <div class="badge-group--icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36" {...props}>
+                    <path fill="#fdd888" d="M31.898 23.938C31.3 17.32 28 14 28 14l-6-8h-8l-6 8s-1.419 1.433-2.567 4.275C3.444 18.935 2 20.789 2 23a4.97 4.97 0 0 0 1.609 3.655A4.94 4.94 0 0 0 3 29c0 1.958 1.136 3.636 2.775 4.456C7.058 35.378 8.772 36 10 36h16c1.379 0 3.373-.779 4.678-3.31C32.609 31.999 34 30.17 34 28a4.99 4.99 0 0 0-2.102-4.062M18 6c.55 0 1.058-.158 1.5-.416c.443.258.951.416 1.5.416c1.657 0 4-2.344 4-4c0 0 0-2-2-2c-.788 0-1 1-2 1s-1-1-3-1s-2 1-3 1s-1.211-1-2-1c-2 0-2 2-2 2c0 1.656 2.344 4 4 4c.549 0 1.057-.158 1.5-.416c.443.258.951.416 1.5.416" />
+                    <path fill="#bf6952" d="M24 6a1 1 0 0 1-1 1H13a1 1 0 0 1 0-2h10a1 1 0 0 1 1 1" />
+                    <path fill="#67757f" d="M23.901 24.542c0-4.477-8.581-4.185-8.581-6.886c0-1.308 1.301-1.947 2.811-1.947c2.538 0 2.99 1.569 4.139 1.569c.813 0 1.205-.493 1.205-1.046c0-1.284-2.024-2.256-3.965-2.592V12.4c0-.773-.65-1.4-1.454-1.4c-.805 0-1.456.627-1.456 1.4v1.283c-2.116.463-3.937 1.875-3.937 4.176c0 4.299 8.579 4.125 8.579 7.145c0 1.047-1.178 2.093-3.111 2.093c-2.901 0-3.867-1.889-5.045-1.889c-.574 0-1.087.464-1.087 1.164c0 1.113 1.938 2.451 4.603 2.824l-.001.01v1.398c0 .772.652 1.4 1.456 1.4s1.455-.628 1.455-1.4v-1.398c0-.017-.008-.03-.009-.045c2.398-.43 4.398-1.932 4.398-4.619" />
+                  </svg>
+                </div>
               </div>
             </section>
+
             <section class="page-title--content max-w-3xl text-center mx-auto">
               <h1
                 class="h2 font-semibold text-3xl lg:text-5xl text-center mx-auto"
               >
-                Got some burning questions about Digi Craft?
-                <br />
-                <br />
-                No worries! We&apos;ve got the answers you need:
+                Web Development
               </h1>
             </section>
-            <section
-              class="accordion--container my-16 drop-shadow-xl max-w-3xl w-full mx-auto offset-y-0 offset-x-8"
-            >
-              <div
-                id="1"
-                class="accordion-item--container border border-neutral-200 bg-white overflow-hidden rounded-t-lg"
-              >
-                <h2 class="accordion-item--heading mb-0">
-                  <button
-                    class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
-                    type="button"
-                    aria-expanded="true"
-                  >
-                    What is Digi Craft?
-                    <svg
-                      viewBox="0 0 24 24"
-                      class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
-                      astro-icon="mdi:chevron-up"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div class="accordion-item--content py-4 px-5 text-base hidden">
-                  <p>
-                    Digicraft is a web-development and marketing company. We are
-                    passionate about crafting exceptional digital experiences
-                    that resonate with your audience. As your trusted partner,
-                    we offer a comprehensive suite of services designed to
-                    elevate your online presence and drive business growth.
-                  </p>
-                </div>
+            <div class="pricing-container">
+              <div class="pricing-tier">
+                  <div class="tier-name">Basic Website</div>
+                  <div class="tier-price">Ksh20,000 - 30,000</div>
+                  <ul class="feature-list">
+                      <li>5-page responsive website.</li>
+                      <li>Basic SEO optimization</li>
+                      <li>Contact form integration.</li>
+                      <li>1 round of revisions.</li>
+                      <li>1 month of support</li>
+                  </ul>
               </div>
-              <div
-                id="2"
-                class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0"
-              >
-                <h2 class="accordion-item--heading mb-0">
-                  <button
-                    class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
-                    type="button"
-                  >
-                    What is our Vision?
-                    <svg
-                      viewBox="0 0 24 24"
-                      class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
-                      astro-icon="mdi:chevron-up"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div class="accordion-item--content py-4 px-5 text-base hidden">
-                  <p>
-                    To be the leading digital innovation partner, empowering
-                    businesses to thrive in the digital age through cutting-edge
-                    web development solutions.
-                  </p>
-                </div>
+              <div class="pricing-tier highlighted">
+                  <div class="tier-name">Business Pro</div>
+                  <div class="tier-price">Ksh35,000 - 70,000</div>
+                  <ul class="feature-list">
+                      <li>10-page responsive website</li>
+                      <li>Advanced SEO package.</li>
+                      <li>Content Management System (CMS).</li>
+                      <li>E-commerce functionality (up to 50 products).</li>
+                      <li>3 rounds of revisions.</li>
+                      <li>3 months of support.</li>
+                  </ul>
               </div>
-              <div
-                id="3"
-                class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0"
-              >
-                <h2 class="accordion-item--heading mb-0">
-                  <button
-                    class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
-                    type="button"
-                  >
-                    What is our Mission?
-                    <svg
-                      viewBox="0 0 24 24"
-                      class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
-                      astro-icon="mdi:chevron-up"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div class="accordion-item--content py-4 px-5 text-base hidden">
-                  <p>
-                    Our mission is to deliver exceptional web development solutions that drive digital transformation for our clients. We foster growth and success through innovative technology while maintaining ethical and sustainable practices. By nurturing a collaborative and innovative culture, we empower our team to create cutting-edge solutions that propel businesses forward in the digital landscape.
-                  </p>
-                </div>
+              <div class="pricing-tier">
+                  <div class="tier-name">Enterprise Solution</div>
+                  <div class="tier-price">Ksh45,000 - 90,000</div>
+                  <ul class="feature-list">
+                      <li>Custom web application development.</li>
+                      <li>Unlimited pages and products.</li>
+                      <li>Advanced security features.</li>
+                      <li>Third-party integrations.</li>
+                      <li>Performance optimization.</li>
+                      <li>6 months of priority support.</li>
+                  </ul>
               </div>
-              <div
-                id="4"
-                class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0"
-              >
-                <h2 class="accordion-item--heading mb-0">
-                  <button
-                    class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
-                    type="button"
-                  >
-                    Why should I choose DigiCraft?
-                    <svg
-                      viewBox="0 0 24 24"
-                      class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
-                      astro-icon="mdi:chevron-up"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div class="accordion-item--content py-4 px-5 text-base hidden">
-                  <p>
-                    Our team has years of experience
-                    in the digital industry, ensuring that you receive the
-                    highest quality services. We
-                    understand that every business is unique, and we tailor our
-                    services to meet your specific needs and goals.
-                    Our focus is on delivering
-                    measurable results that drive your business forward.
-                    We pride ourselves on
-                    providing excellent customer service and building
-                    long-lasting relationships with our clients.
-                  </p>
-                </div>
-              </div>
-              <div
-                id="5"
-                class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border border-t-0 rounded-b-lg"
-              >
-                <h2 class="accordion-item--heading mb-0">
-                  <button
-                    class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
-                    type="button"
-                  >
-                    Do you offer custom software development?
-                    <svg
-                      viewBox="0 0 24 24"
-                      class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
-                      astro-icon="mdi:chevron-up"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
-                      />
-                    </svg>
-                  </button>
-                </h2>
-                <div class="accordion-item--content py-4 px-5 text-base hidden">
-                  <p>
-                    Yes, we offer custom software development services to meet
-                    the unique needs of our clients. Our team of developers can
-                    create custom software solutions that are tailored to your
-                    specific requirements.
-                  </p>
-                </div>
-              </div>
-            </section>
+            </div>
           </section>
 
-          <!-- <section class="feature-tabs"></section> -->
           <section class="badge-group w-full" id="contactus">
             <div href="" class="badge-group--container align--center undefined">
               <div class="badge-group--message">Contact Us</div>
@@ -948,6 +819,190 @@
             <div id='map'></div>
           </div>
         </div>
+
+        <section id="faq" class="faq">
+          <section class="badge-group w-full">
+            <div
+              href=""
+              class="badge-group--container align--center undefined"
+            >
+              <div class="badge-group--message">FAQ</div>
+            </div>
+          </section>
+          <section class="page-title--content max-w-3xl text-center mx-auto">
+            <h1
+              class="h2 font-semibold text-3xl lg:text-5xl text-center mx-auto"
+            >
+              Got some burning questions about Digi Craft?
+              <br />
+              <br />
+              No worries! We&apos;ve got the answers you need:
+            </h1>
+          </section>
+          <section
+            class="accordion--container my-16 drop-shadow-xl max-w-3xl w-full mx-auto offset-y-0 offset-x-8"
+          >
+            <div
+              id="1"
+              class="accordion-item--container border border-neutral-200 bg-white overflow-hidden rounded-t-lg"
+            >
+              <h2 class="accordion-item--heading mb-0">
+                <button
+                  class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
+                  type="button"
+                  aria-expanded="true"
+                >
+                  What is Digi Craft?
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
+                    astro-icon="mdi:chevron-up"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
+                    />
+                  </svg>
+                </button>
+              </h2>
+              <div class="accordion-item--content py-4 px-5 text-base hidden">
+                <p>
+                  Digicraft is a web-development and marketing company. We are
+                  passionate about crafting exceptional digital experiences
+                  that resonate with your audience. As your trusted partner,
+                  we offer a comprehensive suite of services designed to
+                  elevate your online presence and drive business growth.
+                </p>
+              </div>
+            </div>
+            <div
+              id="2"
+              class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0"
+            >
+              <h2 class="accordion-item--heading mb-0">
+                <button
+                  class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
+                  type="button"
+                >
+                  What is our Vision?
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
+                    astro-icon="mdi:chevron-up"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
+                    />
+                  </svg>
+                </button>
+              </h2>
+              <div class="accordion-item--content py-4 px-5 text-base hidden">
+                <p>
+                  To be the leading digital innovation partner, empowering
+                  businesses to thrive in the digital age through cutting-edge
+                  web development solutions.
+                </p>
+              </div>
+            </div>
+            <div
+              id="3"
+              class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0"
+            >
+              <h2 class="accordion-item--heading mb-0">
+                <button
+                  class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
+                  type="button"
+                >
+                  What is our Mission?
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
+                    astro-icon="mdi:chevron-up"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
+                    />
+                  </svg>
+                </button>
+              </h2>
+              <div class="accordion-item--content py-4 px-5 text-base hidden">
+                <p>
+                  Our mission is to deliver exceptional web development solutions that drive digital transformation for our clients. We foster growth and success through innovative technology while maintaining ethical and sustainable practices. By nurturing a collaborative and innovative culture, we empower our team to create cutting-edge solutions that propel businesses forward in the digital landscape.
+                </p>
+              </div>
+            </div>
+            <div
+              id="4"
+              class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border rounded-none border-t-0"
+            >
+              <h2 class="accordion-item--heading mb-0">
+                <button
+                  class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
+                  type="button"
+                >
+                  Why should I choose DigiCraft?
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
+                    astro-icon="mdi:chevron-up"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
+                    />
+                  </svg>
+                </button>
+              </h2>
+              <div class="accordion-item--content py-4 px-5 text-base hidden">
+                <p>
+                  Our team has years of experience
+                  in the digital industry, ensuring that you receive the
+                  highest quality services. We
+                  understand that every business is unique, and we tailor our
+                  services to meet your specific needs and goals.
+                  Our focus is on delivering
+                  measurable results that drive your business forward.
+                  We pride ourselves on
+                  providing excellent customer service and building
+                  long-lasting relationships with our clients.
+                </p>
+              </div>
+            </div>
+            <div
+              id="5"
+              class="accordion-item--container border border-neutral-200 bg-white overflow-hidden border border-t-0 rounded-b-lg"
+            >
+              <h2 class="accordion-item--heading mb-0">
+                <button
+                  class="group relative flex w-full font-semibold items-center rounded-t-lg border-0 bg-white py-4 px-5 text-left text-base text-neutral-800 transition"
+                  type="button"
+                >
+                  Do you offer custom software development?
+                  <svg
+                    viewBox="0 0 24 24"
+                    class="ml-auto h-8 w-8 shrink-0 rotate-[-180deg] transition-transform duration-200 ease-in-out motion-reduce:transition-none"
+                    astro-icon="mdi:chevron-up"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M7.41 15.41 12 10.83l4.59 4.58L18 14l-6-6-6 6 1.41 1.41z"
+                    />
+                  </svg>
+                </button>
+              </h2>
+              <div class="accordion-item--content py-4 px-5 text-base hidden">
+                <p>
+                  Yes, we offer custom software development services to meet
+                  the unique needs of our clients. Our team of developers can
+                  create custom software solutions that are tailored to your
+                  specific requirements.
+                </p>
+              </div>
+            </div>
+          </section>
+        </section>
       </div>
 
       <footer id="footer" class="bg-white">
