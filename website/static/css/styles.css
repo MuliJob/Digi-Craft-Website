@@ -1481,6 +1481,19 @@ blockquote {
     box-shadow: 0 0 0 2px rgba(255, 153, 0, 0.774);
 }
 
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+        display: flex;
+        width: 100%;
+    }
+
+    .newsletter-input {
+        width: 100%;
+    }
+}
+
 .contact-section {
     display: flex;
     justify-content: space-around;
@@ -1604,19 +1617,6 @@ textarea:focus {
     .contact-column {
         width: 100%;
         margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .newsletter-form {
-        flex-direction: column;
-        gap: 10px;
-        display: flex;
-        width: 100%;
-    }
-
-    .newsletter-input {
-        width: 100%;
     }
 }
 
@@ -1781,3 +1781,67 @@ body {
         padding-right: 8rem;
     }
 }
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .pricing-tier {
+    background-color: #c7c7c733;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    min-width: 250px;
+    box-sizing: border-box;
+  }
+  
+  .pricing-tier.highlighted {
+    background-color: rgb(235 141 0);
+  }
+  
+  .tier-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .tier-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fbbf24;
+    margin-bottom: 20px;
+  }
+  
+  .tier-price span {
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .feature-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .feature-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .feature-list li::before {
+    content: "✓";
+    color: #fbbf24;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .pricing-tier {
+        width: 100%;
+    }
+  }
