@@ -1782,12 +1782,16 @@ body {
     }
 }
 
+.top-padding {
+    margin-top: 30px;
+}
+
 .pricing-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    max-width: 1200px;
     margin: 0 auto;
+    max-width: 1250px;
     padding: 20px;
 }
 
@@ -1800,7 +1804,7 @@ body {
     transition: transform 0.4s, box-shadow 0.4s, background-color 0.4s;
     position: relative;
     overflow: hidden;
-    min-width: 250px;
+    min-width: 300px;
     box-sizing: border-box;
 }
 
@@ -1884,9 +1888,11 @@ body {
 @media (max-width: 768px) {
     .pricing-container {
         flex-direction: column;
+        width: 100%;
     }
     .pricing-tier {
         margin-bottom: 20px;
+        width: 100%;
     }
     .tier-price {
         font-size: 20px;
