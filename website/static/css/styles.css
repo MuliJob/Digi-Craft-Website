@@ -1786,7 +1786,6 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -1802,6 +1801,9 @@ body {
     overflow: hidden;
     min-width: 250px;
     box-sizing: border-box;
+}
+#pricing-plans {
+    padding: 40px;
 }
 
 .pricing-tier::before {
@@ -1887,6 +1889,7 @@ body {
     }
     .pricing-tier {
         margin-bottom: 20px;
+        width: 100%;
     }
     .tier-price {
         font-size: 20px;
