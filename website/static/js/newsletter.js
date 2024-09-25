@@ -16,7 +16,7 @@ $(document).ready(function() {
 
   const csrftoken = getCookie('csrftoken');
 
-  $('form').submit(function(event) {
+  $(document).on('submit', '#newsletter-subscription', function(event) {
       event.preventDefault();
       
       const form = $(this);
