@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import NewsLetterRecipients
+from .models import NewsLetterRecipients, Message
 from django.http import Http404, JsonResponse
 from .email import send_welcome_email
 
@@ -29,3 +29,27 @@ def newsletter(request):
         send_welcome_email(email)
         data = {'success': 'You have been successfully added to the mailing list'}
     return JsonResponse(data)
+
+def message(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+
+        try:
+            additional_message = Message(
+                name=name,
+                email=email,
+                phone=phone,
+                message=message
+            )
+
+            additional_message.save()
+
+            return JsonResponse({'success': 'Message sent successfully!'})
+        
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=400)
+
+    return JsonResponse({'error': 'Invalid request method.'}, status=405)
