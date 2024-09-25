@@ -1070,16 +1070,17 @@
                       <h5 class="newsletter-heading">
                         Subscribe To Our Newsletter
                       </h5>
-                      <form action="" class="newsletter-form">
+                      <form action="{% url 'newsletter' %}" method="POST" class="newsletter-form">
                         {% csrf_token %}
                         <input
                           type="email"
+                          name="email"
                           placeholder="example@example.com"
                           class="newsletter-input"
                         />
-                        <a role="button" href="#" class="btn btn--secondary">
+                        <button type="submit" class="btn btn--secondary">
                           Subscribe
-                        </a>
+                        </button>
                       </form>
                     </div>
                   </section>
