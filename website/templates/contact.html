@@ -52,7 +52,7 @@
 
 <div class="contact-container">
 <div class="contact-form">
-  <form>
+  <form action="{% url 'message' %}" method="POST" id="send-message">
     {% csrf_token %}
     <div class="form-row">
       <div class="form-group">
@@ -73,7 +73,7 @@
       <textarea id="message" name="message" rows="4" placeholder="Write a message..."></textarea>
     </div>
     <div class="form-group">
-      <button type="submit" class="btn btn--secondary">Send message</button>
+      <button type="submit" class="btn btn--secondary submit-button" id="message-button">Send message</button>
     </div>
   </form>
 </div>
