@@ -32,13 +32,17 @@ $(document).ready(function() {
           headers: { 'X-CSRFToken': csrftoken },
           dataType: 'json',
           success: function(data) {
-              toastr.success(data['success'], 'Subscribed Successfully!');
+              if (data.success) {
+                  toastr.success(data.success, 'Subscribed Successfully!');
+              } else if (data.error) {
+                  toastr.warning(data.error, 'Warning');
+              }
               form.trigger('reset');
-              submitButton.html('Subscribe');
-              submitButton.prop('disabled', false);
           },
           error: function(xhr, errmsg, err) {
               toastr.error('There was an issue with your subscription.', 'Error');
+          },
+          complete: function() {
               submitButton.html('Subscribe');
               submitButton.prop('disabled', false);
           }

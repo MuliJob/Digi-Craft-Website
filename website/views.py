@@ -21,9 +21,11 @@ def about(request):
 
 def newsletter(request):
     email = request.POST.get('email')
-
-    recipient = NewsLetterRecipients(email=email)
-    recipient.save()
-    send_welcome_email(email)
-    data = {'success': 'You have been successfully added to mailing list'}
+    if NewsLetterRecipients.objects.filter(email=email).exists():
+        data = {'error': 'This email is already subscribed to the mailing list'}
+    else:
+        recipient = NewsLetterRecipients(email=email)
+        recipient.save()
+        send_welcome_email(email)
+        data = {'success': 'You have been successfully added to the mailing list'}
     return JsonResponse(data)
