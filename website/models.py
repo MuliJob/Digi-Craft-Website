@@ -7,7 +7,7 @@ class NewsLetterRecipients(models.Model):
 class Message(models.Model):
     name = models.CharField(max_length=30, blank=False)
     email = models.EmailField(blank=False)
-    phone_number = models.CharField(max_length=10,blank=False)
+    phone = models.CharField(max_length=10,blank=False)
     message = models.CharField(max_length=1000, blank=False)
 
     def __str__(self):
