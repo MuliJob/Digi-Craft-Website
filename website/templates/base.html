@@ -98,7 +98,11 @@
     {% block styles %}
     {% endblock %}
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="{% static 'js/lemon.js' %}" defer></script>
+    <script src="{% static 'js/newsletter.js' %}"></script>
     <script type="module">
       let o = null;
       const s = (e) => {
@@ -319,16 +323,18 @@
                       <h5 class="newsletter-heading">
                         Subscribe To Our Newsletter
                       </h5>
-                      <form action="" class="newsletter-form">
+                      <form action="{% url 'newsletter' %}" class="newsletter-form" method="POST">
                         {% csrf_token %}
                         <input
                           type="email"
+                          name="email"
                           placeholder="example@example.com"
                           class="newsletter-input"
+                          required
                         />
-                        <a role="button" href="#" class="btn btn--secondary">
+                        <button type="submit"  class="btn btn--secondary" id="submit-button">
                           Subscribe
-                        </a>
+                        </button>
                       </form>
                     </div>
                   </section>
