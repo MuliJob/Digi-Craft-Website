@@ -101,6 +101,7 @@
 
     <script src="{% static 'js/lemon.js' %}" defer></script>
     <script src="{% static 'js/newsletter.js' %}"></script>
+    <script src="{% static 'js/message.js' %}"></script>
     <script type="module">
       let o = null;
       const s = (e) => {
@@ -219,20 +220,20 @@
                     </li>
                     <li class="header-nav--menu-item">
                       <a
+                        href="{% url 'about' %}"
+                        class="menu-item--link flex items-center"
+                        target="_self"
+                      >
+                        About
+                      </a>
+                    </li>
+                    <li class="header-nav--menu-item">
+                      <a
                         href="/#features"
                         class="menu-item--link flex items-center"
                         target="_self"
                       >
                         Features
-                      </a>
-                    </li>
-                    <li class="header-nav--menu-item">
-                      <a
-                        href="{% url 'pricing' %}"
-                        class="menu-item--link flex items-center"
-                        target="_self"
-                      >
-                        Pricing Plans
                       </a>
                     </li>
                     <li class="header-nav--menu-item">
@@ -246,20 +247,20 @@
                     </li>
                     <li class="header-nav--menu-item">
                       <a
+                        href="{% url 'pricing' %}"
+                        class="menu-item--link flex items-center"
+                        target="_self"
+                      >
+                        Pricing Plans
+                      </a>
+                    </li>
+                    <li class="header-nav--menu-item">
+                      <a
                         href="{% url 'contact' %}"
                         class="menu-item--link flex items-center"
                         target="_self"
                       >
                         Contact
-                      </a>
-                    </li>
-                    <li class="header-nav--menu-item">
-                      <a
-                        href="{% url 'about' %}"
-                        class="menu-item--link flex items-center"
-                        target="_self"
-                      >
-                        About
                       </a>
                     </li>
                     <li class="header-nav--menu-item">
@@ -825,7 +826,7 @@
 
         <div class="contact-container">
           <div class="contact-form">
-            <form>
+            <form action="{% url 'message' %}" method="POST" id="send-message">
               {% csrf_token %}
               <div class="form-row">
                 <div class="form-group">
@@ -846,7 +847,7 @@
                 <textarea id="message" name="message" rows="4" placeholder="Write a message..."></textarea>
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn--secondary">Send message</button>
+                <button type="submit" class="btn btn--secondary" id="message-button">Send message</button>
               </div>
             </form>
           </div>
@@ -1075,7 +1076,7 @@
                       <h5 class="newsletter-heading">
                         Subscribe To Our Newsletter
                       </h5>
-                      <form action="{% url 'newsletter' %}" method="POST" class="newsletter-form">
+                      <form action="{% url 'newsletter' %}" method="POST" class="newsletter-form" id="newsletter-subscription">
                         {% csrf_token %}
                         <input
                           type="email"
