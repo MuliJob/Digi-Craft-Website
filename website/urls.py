@@ -7,6 +7,6 @@ urlpatterns = [
     path('contactus/', views.contact, name = 'contact'),
     path('services/', views.services, name= 'services'),
     path('about/', views.about, name = 'about'),
-    path(r'ajax/newsletter/', views.newsletter, name='newsletter'),
+    path(r'newsletter/subscribe/', views.newsletter, name='newsletter'),
     path(r'contact/sendmessage/', views.message, name='message')
 ]
