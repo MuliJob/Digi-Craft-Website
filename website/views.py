@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import NewsLetterRecipients, Message
-from django.http import Http404, JsonResponse
+from django.http import JsonResponse
 from .email import send_welcome_email
 
 # Create your views here.
@@ -27,7 +27,7 @@ def newsletter(request):
         recipient = NewsLetterRecipients(email=email)
         recipient.save()
         send_welcome_email(email)
-        data = {'success': 'You have been successfully added to the mailing list'}
+        data = {'success': 'Welcome aboard! 🚀 Thank you for subscribing to our newsletter! 🎉'}
     return JsonResponse(data)
 
 def message(request):
@@ -47,7 +47,7 @@ def message(request):
 
             additional_message.save()
 
-            return JsonResponse({'success': 'Message sent successfully!'})
+            return JsonResponse({'success': 'We have received your message 🤝. We will contact you soon. 🤖'})
         
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=400)
