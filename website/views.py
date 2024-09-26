@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import NewsLetterRecipients, Message
 from django.http import JsonResponse
-from .email import send_welcome_email
+from .email import message_notification, send_welcome_email
 
 # Create your views here.
 def index(request):
@@ -46,7 +46,7 @@ def message(request):
             )
 
             additional_message.save()
-
+            message_notification(name)
             return JsonResponse({'success': 'We have received your message 🤝. We will contact you soon. 🤖'})
         
         except Exception as e:
