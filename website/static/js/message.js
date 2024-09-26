@@ -26,7 +26,7 @@ $(document).ready(function() {
         submitButton.prop('disabled', true);
 
         $.ajax({
-            url: '/ajax/message/',
+            url: '/contact/sendmessage/',
             type: 'POST',
             data: form.serialize(),
             headers: { 'X-CSRFToken': csrftoken },

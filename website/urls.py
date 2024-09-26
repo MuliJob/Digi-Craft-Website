@@ -8,5 +8,5 @@ urlpatterns = [
     path('services/', views.services, name= 'services'),
     path('about/', views.about, name = 'about'),
     path(r'ajax/newsletter/', views.newsletter, name='newsletter'),
-    path(r'ajax/message/', views.message, name='message')
+    path(r'contact/sendmessage/', views.message, name='message')
 ]
