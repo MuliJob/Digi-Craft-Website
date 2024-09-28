@@ -26,7 +26,7 @@ $(document).ready(function() {
       submitButton.prop('disabled', true);
 
       $.ajax({
-          url: '/ajax/newsletter/',
+          url: '/newsletter/subscribe/',
           type: 'POST',
           data: form.serialize(),
           headers: { 'X-CSRFToken': csrftoken },
