@@ -151,12 +151,25 @@
           m();
         });
       });
-      let map = L.map('map').setView([-0.0917, 34.7680], 13);
+      let map = L.map('map');
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '© OpenStreetMap'
       }).addTo(map);
+
+      let kapsabetMarker = L.marker([0.259636, 35.078467]).addTo(map);
+      kapsabetMarker.bindPopup("Digicraft");
+
+      let kisumuMarker = L.marker([-0.0917, 34.7680]).addTo(map);
+      kisumuMarker.bindPopup("Digicraft");
+
+      let bounds = L.latLngBounds([
+          [0.259636, 35.078467],
+          [-0.0917, 34.7680]
+      ]);
+
+      map.fitBounds(bounds.pad(0.1));
     </script>
     <script src="{% static 'js/script.js' %}"></script>
   </head>
