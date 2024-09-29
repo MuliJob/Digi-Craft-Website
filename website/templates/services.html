@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block styles %}
+<style>
+  .btn .text {
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.3s ease, opacity 0.3s ease, margin-right 0.3s ease;
+    white-space: nowrap;
+  }
+  .btn:hover .text {
+    max-width: 200px;
+    opacity: 1;
+    margin-right: 10px;
+  }
+  .btn svg {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+{% endblock %}
 {% block content %}
 <section class="feature-tabs top-padding" id="services">
   <section class="badge-group w-full">
@@ -65,7 +84,8 @@
           class="card--body h-100 w-100 w-full bg-white-600/20 p-12"
         >
           <div class="card--image undefined">
-            <img
+            <a href="{% url 'details' %}">
+              <img
               alt="Graphic design."
               class="object-cover undefined"
               width="672"
@@ -74,6 +94,7 @@
               loading="lazy"
               decoding="async"
             />
+            </a>
           </div>
           <div
             class="card--header flex flex-row w-auto items-center justify-between"
@@ -91,6 +112,17 @@
             assets </span>that align with your brand's personality and
             messaging.
           </p>
+          <div class="btn-group--container align--left">
+            <a role="button" class="btn btn--secondary" href="{% url 'details' %}">
+              <span class="text">Read more</span>
+              <svg viewBox="0 0 24 24" class="w-6">
+                <path
+                  fill="currentColor"
+                  d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"
+                />
+              </svg>
+          </a>
+          </div>
         </div>
       </div>
       <div
@@ -128,6 +160,17 @@
             community engagement, and analytics</span> to help you maximize
             your social media presence.
           </p>
+          <div class="btn-group--container align--left">
+            <a role="button" class="btn btn--secondary" href="{% url 'details' %}">
+              <span class="text">Read more</span>
+              <svg viewBox="0 0 24 24" class="w-6">
+                <path
+                  fill="currentColor"
+                  d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"
+                />
+              </svg>
+          </a>
+          </div>
         </div>
       </div>
       <div
@@ -167,6 +210,17 @@
             optimization (SEO), pay-per-click (PPC) advertising,
             content marketing, and email marketing.</span>
           </p>
+          <div class="btn-group--container align--left">
+            <a href="{% url 'details' %}" class="btn btn--secondary" role="button">
+                <span class="text">Read more</span>
+                <svg viewBox="0 0 24 24" class="w-6">
+                  <path
+                    fill="currentColor"
+                    d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"
+                  />
+                </svg>
+            </a>
+          </div>
         </div>
       </div>
       <div
@@ -207,6 +261,17 @@
             From custom website design to e-commerce solutions, we have the
             expertise to bring your vision to life.
           </p>
+          <div class="btn-group--container align--left">
+            <a role="button" class="btn btn--secondary" href="{% url 'details' %}">
+                <span class="text">Read more</span>
+                <svg viewBox="0 0 24 24" class="w-6">
+                  <path
+                    fill="currentColor"
+                    d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"
+                  />
+                </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
